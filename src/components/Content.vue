@@ -1,7 +1,15 @@
 <template>
 <div class="container">
-  <h1 class="section-title">Калькулятор и конвертер криптовалют</h1>
-  <div class="row">
+  <div class="row section-title">
+    <div class="col-lg-2 offset-lg-3">
+      <span class="cur1"></span>
+    </div>
+    <div class="col-lg-2">
+      <span class="fa fa-arrow-right"></span>
+    </div>
+    <div class="col-lg-2">
+      <span class="cur2"></span>
+    </div>
     <div class="col-lg-3 offset-lg-3 currency-field">
       <label>Из</label>
       <select class="form-control">
@@ -44,6 +52,8 @@
 </template>
 
 <script>
+import Typed from 'typed.js'
+
 export default {
   name: 'Content',
   data () {
@@ -73,6 +83,21 @@ export default {
       this.sum = 0;
       this.dotCount = 0;
     }
+  },
+  mounted: function () {
+    let options = (arr) => {
+      return {
+        strings: arr,
+        typeSpeed: 100,
+        backSpeed: 80,
+        loop: true,
+        loopCount: Infinity,
+        showCursor: false
+      }
+    }
+
+    new Typed('.cur1', options(['BTC', 'RUR', 'USD', 'ETH', 'EUR']))
+    new Typed('.cur2', options(['ETH', 'USD', 'EUR', 'LTC', 'BTC']))
   }
 }
 </script>
