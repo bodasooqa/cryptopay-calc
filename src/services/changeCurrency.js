@@ -1,10 +1,10 @@
 import Api from '@/services/Api'
 
 export default {
-  register () {
-    return Api().get('btc-usd')
+  change (cur) {
+    Api().get(cur)
       .then((response) => {
-        console.log(response.data)
+        return response.data
       })
       .catch((error) => {
         console.error(error)
