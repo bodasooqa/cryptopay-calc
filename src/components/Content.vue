@@ -201,7 +201,7 @@ export default {
   box-shadow: 0px 4px 5px -1px rgba(0, 0, 0, 0.5);
   transition: 0.1s;
   &:active {
-    border-top: 3px solid #962a20;
+    border-top: 3px solid #502f50;
     border-bottom: none !important;
     box-shadow: 0px 4px 5px -1px rgba(0, 0, 0, 0.5) inset;
   }
