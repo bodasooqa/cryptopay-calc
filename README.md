@@ -1,30 +1,32 @@
-# client
+# Cryptopay "calculator/converter"
 
-> A Vue.js project
-
-## Build Setup
+> Проект на Vue.js с использованием Bootstrap, SASS(SCSS), Typed.js, а также стороннего 
+> API, предоставляющего настоящий курс валют (https://ru.cryptonator.com/api).
+### Dev - сборка
 
 ``` bash
-# install dependencies
-npm install
+# Установка зависимостей
+npm i
 
-# serve with hot reload at localhost:8080
+# Запуск сервера с хот-релодом по адресу localhost:8080
 npm run dev
-
+```
+### Prod - сборка
+```bash
 # build for production with minification
 npm run build
 
 # build for production and view the bundle analyzer report
 npm run build --report
-
-# run unit tests
+```
+### Тесты
+```bash
+# Unit-тесты
 npm run unit
 
-# run e2e tests
+# e2e-тесты
 npm run e2e
 
-# run all tests
+# Полное тестирование
 npm test
 ```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
