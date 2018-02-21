@@ -31,5 +31,5 @@ npm run unit
 npm run e2e
 
 # Полное тестирование
-npm test
+npm run test
 ```
