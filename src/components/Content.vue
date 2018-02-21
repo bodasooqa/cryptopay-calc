@@ -1,7 +1,7 @@
 <template>
 <div class="container">
   <div class="row service">
-    <h1>Удобный сервис конвертации и рассчета криптовалюты</h1>
+    <h1>Удобный сервис конвертации и рассчета валюты</h1>
     <div class="col-lg-2 offset-lg-3 cur">
       <span class="cur1"></span>
     </div>
