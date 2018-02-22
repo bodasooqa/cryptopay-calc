@@ -1,4 +1,4 @@
-import Typed from '../../../node_modules/typed.js/lib/typed'
+import Typed from 'typed.js'
 import axios from 'axios'
 
 const HTTP = axios.create({
