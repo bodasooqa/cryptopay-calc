@@ -1,14 +1,14 @@
 <template>
 <div class="container">
   <div class="row service">
-    <h1>Удобный сервис конвертации и рассчета валюты</h1>
-    <div class="col-lg-2 offset-lg-3 cur">
+    <h1>Удобный сервис конвертации и расчета валюты</h1>
+    <div class="col-lg-2 offset-lg-3 col-5 cur">
       <span class="cur1"></span>
     </div>
-    <div class="col-lg-2 cur">
+    <div class="col-lg-2 col-2 cur">
       <span class="fa fa-exchange"></span>
     </div>
-    <div class="col-lg-2 cur">
+    <div class="col-lg-2 col-5 cur">
       <span class="cur2"></span>
     </div>
     <div class="col-lg-3 offset-lg-3 currency-field">
@@ -37,16 +37,16 @@
         </div>
         <div class="col-lg-12 btns" :class="{ active: calcOn }">
           <div class="row">
-            <div class="col-lg-4" v-for="i in 9" :key="i">
+            <div class="col-4" v-for="i in 9" :key="i">
               <button @click="editSum(i)" class="btn mt-2 btn-num">{{ i }}</button>
             </div>
-            <div class="col-lg-4">
+            <div class="col-4">
               <button @click="editSum(0)" class="btn mt-2 btn-num">0</button>
             </div>
-            <div class="col-lg-4">
+            <div class="col-4">
               <button @click="editSum('.')" class="btn mt-2 btn-num">.</button>
             </div>
-            <div class="col-lg-4">
+            <div class="col-4">
               <button @click="delSum" class="btn mt-2 btn-num">Del</button>
             </div>
           </div>
@@ -60,6 +60,14 @@
           <span class="first-val">{{sum}} {{firstVal.toUpperCase()}}</span> = <span class="second-val">{{(sum * price).toFixed(2)}} {{secondVal.toUpperCase()}}</span>
         </h2>
       </transition>
+    </div>
+  </div>
+  <div class="row author">
+    <div class="container">
+      <div class="social">
+        <a href="https://github.com/bodasooqa"><span class="fa fa-github"></span></a>
+      </div>
+      <p>© 2018 | bodasooqa</p>
     </div>
   </div>
 </div>
@@ -230,19 +238,61 @@ export default {
   transition: height 400ms cubic-bezier(0, 0, 0.2, 1);
   overflow: hidden;
   height: 0;
+  margin-bottom: 1rem;
   &.active {
     height: 12rem;
   }
 }
-.result {
-  margin-top: 1rem;
+.author {
+  .container {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 1rem;
+  }
+  p {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  .social {
+    text-align: center;
+    a {
+      font-size: 2rem;
+      color: #dddddd;
+    &:hover {
+      color: #ffffff;
+    };
+    }
+  }
 }
 
 /* Vue */
 .fade-enter-active, .fade-leave-active {
   transition: opacity .3s;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active до версии 2.1.8 */ {
+.fade-enter, .fade-leave-to /* .fade-leave-active до версии 2.1.8 */
+{
   opacity: 0;
+}
+@media (max-width: 575px) {
+  .service {
+    h1 {
+      width: 100%;
+    }
+  }
+  .cur1, .cur2 {
+    float: none;
+  }
+  .currency-field {
+    label {
+      text-align: left;
+      margin-top: 8px;
+    }
+  }
+  .author {
+    .container {
+      position: relative;
+    }
+  }
 }
 </style>
