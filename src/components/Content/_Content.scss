@@ -108,6 +108,15 @@
 {
   opacity: 0;
 }
+
+@media (min-width: 992px) and (max-height: 700px) {
+  .author {
+    .container {
+      bottom: -30%;
+    }
+  }
+}
+
 @media (max-width: 991px) {
   .service {
     h1 {
